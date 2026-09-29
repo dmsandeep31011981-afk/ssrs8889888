@@ -118,7 +118,7 @@ p { margin: 0 0 1em; }
 }
 .page-hero .container { position: relative; padding: 40px 0; }
 .page-hero[style*="photo-12"] { background-position: center 20%; }
-.page-hero[style*="photo-09"] { background-position: center 28%; }
+.page-hero[style*="photo-09"] { background-position: center 33.2%; min-height: clamp(480px, 32vw, 640px); }
 .page-hero[style*="photo-20"] { background-position: center 25%; }
 .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: .2em; }
 .page-hero p { color: #f3e9dc; max-width: 60ch; margin: 0; }
@@ -280,13 +280,3 @@ form textarea { min-height: 140px; resize: vertical; }
 .site-footer a:hover { color: var(--gold); }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
 .copyright { border-top: 1px solid rgba(255,255,255,.12); margin-top: 32px; padding-top: 18px; font-size: .82rem; color: #bfae9b; }
-
-/* Gallery banner: tall portrait photo — on wider screens show the performer on the right, text on the left */
-@media (min-width: 761px) {
-  .page-hero[style*="photo-09"] {
-    background: url('../images/gallery/photo-09.jpg') right top 12% / auto 140% no-repeat, var(--maroon-dark);
-  }
-  .page-hero[style*="photo-09"]::before {
-    background: linear-gradient(90deg, rgba(30,5,9,1) 0, rgba(30,5,9,1) calc(100% - 470px), rgba(30,5,9,.35) calc(100% - 330px), rgba(30,5,9,0) calc(100% - 220px));
-  }
-}
